@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Configurations>Debug;Release;Test</Configurations>
+    <Platforms>AnyCPU;x86;x64</Platforms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Interop.PowerPoint">
+      <WrapperTool>tlbimp</WrapperTool>
+      <VersionMinor>12</VersionMinor>
+      <VersionMajor>2</VersionMajor>
+      <Guid>91493440-5a91-11cf-8700-00aa0060263b</Guid>
+      <Lcid>0</Lcid>
+      <Isolated>false</Isolated>
+      <EmbedInteropTypes>true</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Aspose.Slides.NET" Version="23.8.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="office">
+      <HintPath>..\..\..\..\..\..\Windows\assembly\GAC_MSIL\office\15.0.0.0__71e9bce111e9429c\OFFICE.DLL</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
